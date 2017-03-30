@@ -6,6 +6,8 @@ var bodyParser = require("body-parser");
 
 const PORT = process.env.PORT || 8080;
 
+process.env.TZ = 'Europe/Copenhagen' 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
@@ -29,7 +31,7 @@ app.post("/food", function(request, response){
 });
 
 function timeDifferenceString(date1, date2){
-    var timeDiff = Math.abs(date1.getTime() - date2.getTime());
+    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
     var hours = Math.ceil(timeDiff / (1000 * 3600));
     var minutes = Math.ceil((timeDiff % (1000 * 3600)) / (1000 * 60));
 
