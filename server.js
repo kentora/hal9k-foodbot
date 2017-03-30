@@ -24,7 +24,7 @@ app.post("/food", function(request, response){
     response.setHeader("content-type", "application/json");
     response.end(`{
         "response_type": "in_channel",
-        "text": "` + request.body.user_name + ` orders from ` + orderFrom + ` at ` + orderAtString + ` (In ` + timeDifferenceString(now, orderAt) + `)",
+        "text": "@` + request.body.user_name + ` bestiller ` + orderFrom + ` klokken ` + orderAtString + ` (Om ` + timeDifferenceString(now, orderAt) + `)",
     }`);
 });
 
