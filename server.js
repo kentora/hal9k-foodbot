@@ -7,8 +7,9 @@ var bodyParser = require("body-parser");
 const PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 
-app.post("/", function(request, response){
+app.post("/food", function(request, response){
     console.log(request.body);
     response.end("test");
 });
