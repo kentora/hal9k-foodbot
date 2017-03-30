@@ -1,0 +1,23 @@
+{
+  "name": "hal9k-foodbot",
+  "version": "1.0.0",
+  "description": "A bot for ordering and paying for food @ Hackerspace hal9k",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentora/hal9k-foodbot.git"
+  },
+  "author": "Kentora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kentora/hal9k-foodbot/issues"
+  },
+  "homepage": "https://github.com/kentora/hal9k-foodbot#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
