@@ -12,13 +12,14 @@ app.use(bodyParser.urlencoded());
 app.post("/food", function(request, response){
     console.log(request.body);
 
-    var now = Date.now();
+    var now = new Date();
 
     var split = request.body.text.split("@");
     var orderFrom = split[0];
     var orderAtString = split[1];
     var orderAtArray = orderAtString.split(":");
-    var orderAt = Date.now().setHours(orderAtArray[0], orderAtArray[1]);
+    var orderAt = new Date();
+    orderAt.setHours(Number(orderAtArray[0]), Number(orderAtArray[1]));
 
     response.setHeader("content-type", "application/json");
     response.end(`{
